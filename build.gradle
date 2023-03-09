@@ -20,6 +20,8 @@ jacocoTestReport {
         html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
+
+
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
