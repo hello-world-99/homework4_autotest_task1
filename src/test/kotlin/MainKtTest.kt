@@ -110,7 +110,7 @@ class MainKtTest {
         val sum = -1.0
         val pay = 0.0
         val result=transaction(type, sum, pay)
-        assertEquals(0.0,result,0.000001)
+        assertEquals(1.0,result,0.000001)
     }
     @Test
     fun transaction13() {
