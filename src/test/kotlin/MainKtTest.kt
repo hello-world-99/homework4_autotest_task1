@@ -38,6 +38,14 @@ class MainKtTest {
         val result=transaction(type, sum, pay)
         assertEquals(1107.5,result,0.000001)
     }
+    @Test
+    fun transaction11() {
+        val type = "Visa"
+        val sum = 5.0
+        val pay = 20.0
+        val result=transaction(type, sum, pay)
+        assertEquals(0.0,result,0.000001)
+    }
 
     @Test
     fun transaction4() {
@@ -66,15 +74,47 @@ class MainKtTest {
     }
     @Test
     fun transaction7() {
-        val type = "231"
-        val sum = -1.0
-        val pay = 0.0
+        val type = "Maestro"
+        val sum = 1.0
+        val pay = -1.0
         val result=transaction(type, sum, pay)
         assertEquals(0.0,result,0.000001)
     }
     @Test
     fun transaction9() {
         val type = ""
+        val sum = 1000.0
+        val pay = 2000.0
+        val result=transaction(type, sum, pay)
+        assertEquals(0.0,result,0.000001)
+    }
+    @Test
+    fun transaction14() {
+        val type = "qwe"
+        val sum = 1000.0
+        val pay = 2000.0
+        val result=transaction(type, sum, pay)
+        assertEquals(0.0,result,0.000001)
+    }
+    @Test
+    fun transaction10() {
+        val type = "Maestro"
+        val sum = -1.0
+        val pay = 0.0
+        val result=transaction(type, sum, pay)
+        assertEquals(0.0,result,0.000001)
+    }
+    @Test
+    fun transaction12() {
+        val type = "Mastercard"
+        val sum = -1.0
+        val pay = 0.0
+        val result=transaction(type, sum, pay)
+        assertEquals(0.0,result,0.000001)
+    }
+    @Test
+    fun transaction13() {
+        val type = "Visa"
         val sum = -1.0
         val pay = 0.0
         val result=transaction(type, sum, pay)
